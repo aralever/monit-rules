@@ -1,0 +1,12 @@
+set daemon  300
+    with start delay 240
+
+set mailserver localhost
+
+set alert root@example.com
+
+set httpd port 2812 and
+    use address <public ip>
+    allow <public ip>
+    allow <client ip>    
+

@@ -1,0 +1,6 @@
+check process amavisd with pidfile /var/run/amavisd/amavisd.pid
+  group mail
+  start program = "/etc/init.d/amavisd start"
+  stop  program = "/etc/init.d/amavisd stop"
+  if failed port 10024 then restart
+  if 5 restarts within 5 cycles then timeout

@@ -1,0 +1,5 @@
+check process clamd.amavisd with pidfile /var/run/amavisd/clamd.pid
+  group mail
+  start program = "/etc/init.d/clamd.amavisd start"
+  stop  program = "/etc/init.d/clamd.amavisd stop"
+  if 5 restarts within 5 cycles then timeout
